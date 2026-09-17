@@ -1,208 +1,43 @@
 # X3D Carry
 
-ระบบอุ้มผู้เล่น/อุ้มศพ FiveM — อุ้ม แบก ขึ้นหลัง ลากศพ, UI ภาษาไทย Vue. · FiveM player/body carry system with a Vue UI.
+**TH:** ระบบอุ้มผู้เล่น/อุ้มศพ FiveM — อุ้ม แบก ขึ้นหลัง ลากศพ, UI ภาษาไทย (Vue 3 + Nuxt).
+**EN:** FiveM player/body carry system — corpse carry, fireman carry, piggyback, with a Vue 3 NUI.
 
 > 🆓 **ฟรี / Free** · FiveM script by **[X3D Developer](https://fivem.x3d-developer.com)** — ESX & Standalone
 > 🌐 หน้าสินค้า / Product page: **https://fivem.x3d-developer.com/th/products/x3d-carry/**
-> 💬 Discord: **https://discord.gg/x3d-developer**
-> ⭐ ชอบไหม? ดูสคริปอื่น ๆ (ฟรี + พรีเมียม) ที่ **[fivem.x3d-developer.com](https://fivem.x3d-developer.com)**
+> 💬 Discord: **https://discord.gg/x3d-developer** · ⭐ สคริปอื่น ๆ (ฟรี + พรีเมียม) ที่ **[fivem.x3d-developer.com](https://fivem.x3d-developer.com)**
 
 ---
 
-# x3d_carry — ระบบอุ้มผู้เล่น (ฟรี)
+## 🇹🇭 ภาษาไทย
 
-อุ้มศพ · อุ้มพาดบ่า · ขี่หลัง · ต้องขออนุญาตก่อนถึงจะอุ้มคนเป็นได้ · เซิร์ฟเวอร์เป็นคนตัดสินทั้งหมด ใช้ช่องโหว่อุ้มคนข้ามแมพไม่ได้ · UI เป็น **Vue 3 + Nuxt 4** สเกลตามความละเอียดจอ · **ไม่ต้องลงอะไรเพิ่มเลย**
+### คุณสมบัติ
+- **อุ้มศพ · อุ้มพาดบ่า · ขี่หลัง**
+- ต้อง**ขออนุญาต**ก่อนถึงจะอุ้มคนเป็นได้
+- **เซิร์ฟเวอร์เป็นคนตัดสินทั้งหมด** — ใช้ช่องโหว่อุ้มข้ามแมพไม่ได้
+- **UI เป็น Vue 3 + Nuxt** สเกลตามความละเอียดจอ (1280p–4K)
+- มี addon แจ้งเตือน — ถ้าเซิร์ฟมี `esx_notify` / `ox_lib` อยู่แล้วจะใช้ตัวนั้นให้อัตโนมัติ ไม่มีก็ใช้การ์ดของตัวเอง
 
-โดย [X3D-Developer](https://x3d-developer.com) · ช่วยเหลือ: discord.gg/x3d-developer
+### ติดตั้ง
+1. วางโฟลเดอร์ `x3d-carry` ใน `resources/`
+2. ใส่ `ensure x3d-carry` ใน `server.cfg`
+3. ปรับค่าใน `config.lua`
 
 ---
 
-## ทำอะไรได้บ้าง
+## 🇬🇧 English
 
-| | |
-|---|---|
-| อุ้มศพได้จริง | ศพเล่นอนิเมชันไม่ได้ ระบบจะ "ปลุกปลอม" ให้ก่อนแล้วเล่นท่าศพทับ ตอนวางลงร่างล้มลงพื้นจริง ไม่ยืนแข็งทื่อ |
-| กันตายซ้ำ | ระหว่างปลุกปลอม ร่างกันกระสุน กันไฟ และมีตัวเติมเลือดคืนทุก 200ms กันระบบหิว/กระหาย/เลือดไหล ฆ่าซ้ำ |
-| ขออนุญาตก่อนอุ้ม | คนเป็นจะเห็นเมนู "ตกลงที่จะโดนอุ้มไหม ?" พร้อมแถบนับถอยหลัง |
-| ดิ้นหลุดได้ | ถ้ายอมให้อุ้มเอง กด F9 แล้วเลือกเพื่อดิ้นหลุดเมื่อไหร่ก็ได้ |
-| ตำรวจ / กู้ชีพ / แอดมิน | อุ้มได้โดยไม่ต้องขอ และคนถูกอุ้มดิ้นหลุดไม่ได้ |
-| กันโกง | ระยะ, รถ, เลือด, การตัดเน็ต เช็กที่เซิร์ฟเวอร์ทุก 2 วินาที ไม่เชื่อ client เลย |
-| ภาษาไทยเต็มรูปแบบ | UI เป็น Nuxt 4 ฟอนต์ไทยมาในตัว ไม่เป็นกล่องสี่เหลี่ยม |
-| เพิ่มท่าอุ้มเองได้ | ใส่ท่าใหม่ใน `config.lua` ระบบสร้างเมนู + คำสั่งให้เอง |
+### Features
+- **Corpse carry · fireman carry · piggyback**
+- **Consent required** before carrying a living player
+- **Fully server-authoritative** — no cross-map carry exploits
+- **Vue 3 + Nuxt NUI**, scales to the screen resolution (1280p–4K)
+- Notify addon — if the server already has `esx_notify` / `ox_lib` it uses that automatically, otherwise it falls back to its own card
 
-## ความต้องการ
-
-**ไม่มี** — วางแล้วใช้ได้เลยทุกเซิร์ฟเวอร์ (ESX, QBCore, standalone) UI ถูก build มาให้แล้วใน `web/build` ไม่ต้องลง Node.js
-
-ต้องใช้ FXServer artifacts 4752 ขึ้นไป (ระบบใช้ state bag)
-
-ถ้าเซิร์ฟเวอร์มี `esx_notify` หรือ `ox_lib` อยู่แล้ว ระบบจะใช้ตัวนั้นแจ้งเตือนให้อัตโนมัติ ไม่มีก็ใช้การ์ดของตัวเอง
-
-## ติดตั้ง
-
-1. วางโฟลเดอร์ `x3d_carry` ใน `resources/`
-2. เพิ่มใน `server.cfg`:
-
-```
-ensure x3d_carry
-
-# ให้แอดมินอุ้มได้โดยไม่ต้องขอ (ใช้ได้ทุกเฟรมเวิร์ก)
-add_ace group.admin x3d_carry.force allow
-```
-
-เสร็จแล้ว
-
-## วิธีเล่น
-
-| ปุ่ม / คำสั่ง | ทำอะไร |
-|---|---|
-| `F9` หรือ `/x3dcarry` | เปิดเมนูอุ้ม |
-| `↑` `↓` | เลื่อนเมนู |
-| `Enter` | เลือก |
-| `Backspace` | ปิดเมนู |
-| `/x3dcarry dragdeath` | อุ้มศพ (ข้ามเมนู) |
-| `/x3dcarry carrypeople` | อุ้มพาดบ่า (ข้ามเมนู) |
-| `/x3dcarry piggyback` | ขี่หลัง (ข้ามเมนู) |
-
-มีคำสั่งเดียวคือ `/x3dcarry` ท่าส่งเป็น argument — **ตั้งใจให้ชื่อยาวและมี prefix** ถ้าใช้ชื่อสั้นอย่าง `/carry` แล้วเซิร์ฟมีสคริปต์อุ้มตัวอื่นจองชื่อนั้นอยู่ FiveM จะทิ้ง `RegisterCommand` ของเราเงียบ ๆ ปุ่มลัดจะไม่ทำงานและไม่มี error ให้เห็น (เจอมาแล้วตอนพัฒนา)
-
-ผูกปุ่มให้แต่ละท่าได้เองที่ ตั้งค่า FiveM > Key Bindings > FiveM
-
-เมนูจะเลือกคนที่ใกล้สุด **ที่ใช้ท่านั้นได้** ให้เอง — เลือก "อุ้มศพ" ระบบหาศพที่ใกล้สุด เลือก "ขี่หลัง" ระบบหาคนเป็นที่ใกล้สุด
-
-กำลังอุ้มอยู่ เมนูจะเหลือรายการเดียวคือท่าที่ใช้อยู่ เลือกซ้ำ = วางลง
-
-คนถูกอุ้มจะขยับเอง ขึ้นรถ หรือใช้อาวุธไม่ได้ จนกว่าจะถูกวางลง
-
-## ท่าอุ้ม
-
-| ท่า | ชื่อท่า (ใช้ต่อท้ายคำสั่ง) | ใช้กับ |
-|---|---|---|
-| อุ้มศพ | `dragdeath` | ผู้หมดสติเท่านั้น |
-| อุ้มพาดบ่า | `carrypeople` | คนเป็นเท่านั้น |
-| ขี่หลัง | `piggyback` | คนเป็นเท่านั้น |
-
-## ⚠ เรื่องอุ้มศพ — อ่านก่อนถ้าเซิร์ฟมีระบบหิว/กระหาย
-
-GTA เล่นอนิเมชันกับร่างที่ตายแล้วไม่ได้ ทุกสคริปต์อุ้มศพจึงต้อง **ปลุกร่างปลอม** ด้วย `NetworkResurrectLocalPlayer` ก่อน แล้วเล่นท่าศพทับอีกที ช่วงที่ร่างยังไม่ตายจริงนี่แหละที่ระบบอื่นอาจเข้ามาฆ่าซ้ำได้
-
-x3d_carry กันไว้ 3 ชั้น:
-
-1. **กันความเสียหาย** — `SetEntityInvincible` + `SetEntityProofs` + `SetEntityCanBeDamaged(false)` ระหว่างถูกอุ้ม
-2. **เติมเลือดคืน** (`Config.Corpse.healthGuard`) — ชั้นที่ 1 กัน `SetEntityHealth(ped, 0)` ที่สคริปต์อื่นสั่งตรง ๆ ไม่ได้ ตัวนี้เลยคอยเช็กทุก 200ms ถ้าเลือดหาย เติมคืนทันที
-3. **ดันค่าสถานะ** (`addons/framework/client.lua` → `Framework.OnCorpseCarried`) — ดันหิว/กระหายให้เต็มตอนเริ่มถูกอุ้ม ค่าเริ่มต้นรองรับ `esx_status` ให้แล้ว ใช้ระบบอื่นแก้ฟังก์ชันเดียวนี้
-
-ตอนวางลง ระบบคืนค่าทุกอย่าง ปลด `SetPedConfigFlag(71)` เปิด ragdoll แล้วค่อยตั้งเลือดเป็น 0 — **ลำดับนี้สำคัญ** สลับลำดับเมื่อไหร่ ศพจะยืนแข็งทื่อแทนที่จะล้มลงพื้น
-
-ถ้ายังเจอตายซ้ำ ให้เพิ่มคำสั่งดันค่าของระบบคุณเองใน `Framework.OnCorpseCarried()`
-
-## ตั้งค่า
-
-แก้ที่ `config.lua` ทั้งหมด ทุกบรรทัดมีคำอธิบายภาษาไทย
-
-| ค่า | ค่าเริ่มต้น | ความหมาย |
-|---|---|---|
-| `Config.Locale` | `'th'` | ภาษาในเกม — `'th'` หรือ `'en'` (แก้ข้อความเองได้ที่ `locales.lua`) |
-| `Config.Command` | `'x3dcarry'` | ชื่อคำสั่ง — อย่าตั้งเป็นชื่อสั้นที่สคริปต์อื่นอาจจองไว้ |
-| `Config.MenuKey` | `'F9'` | ปุ่มเปิดเมนู (`''` = ไม่ผูกปุ่ม) |
-| `Config.Range` | `3.0` | ระยะที่กดอุ้มได้ |
-| `Config.MaxDist` | `4.5` | ห่างกันเกินนี้ขณะอุ้ม เซิร์ฟเวอร์ปล่อยให้เอง |
-| `Config.RequestTTL` | `15000` | คำขออุ้มค้างได้กี่ ms |
-| `Config.Cooldown` | `2000` | กันกดรัว — ขออุ้มได้ทุกกี่ ms |
-| `Config.CarrierDelay` | `500` | คนอุ้มหน่วงกี่ ms ก่อนเริ่มท่า — **ต่ำกว่านี้ท่าคู่จะเหลื่อมกัน (ขี่หลังลอย พาดบ่าหลุด)** |
-| `Config.ForceAce` | `'x3d_carry.force'` | ACE permission ที่อุ้มได้โดยไม่ต้องขอ (`false` = ปิด) |
-| `Config.ForceGroups` | admin, superadmin, mod | กลุ่มแอดมินที่อุ้มได้เลย (ESX / QBCore) |
-| `Config.ForceJobs` | police, ambulance | อาชีพที่อุ้มได้เลย (ESX / QBCore) |
-| `Config.Corpse` | — | ค่ากันตายซ้ำ + การล้มลงพื้น (อ่านหัวข้อด้านบน) |
-
-## เพิ่มท่าอุ้ม
-
-ใส่ใน `Config.Styles` แล้วรีสตาร์ท resource — เมนูกับคำสั่งแชทสร้างให้อัตโนมัติ
-
-```lua
-Config.Styles.bridal = {
-    order   = 4,
-    key     = '',              -- '' = ไม่ผูกปุ่ม ผู้เล่นตั้งเองได้
-    th      = 'อุ้มเจ้าสาว',
-    en      = 'Bridal Carry',
-    target  = 'alive',         -- 'dead' | 'alive' | 'any'
-    offset  = vector3(0.0, 0.42, 0.05),
-    heading = 0.0,
-    carrier = { dict = 'anim@dict', anim = 'carrier_anim', flag = 49 },
-    victim  = { dict = 'anim@dict', anim = 'victim_anim',  flag = 33 },
-}
-```
-
-`flag = 49` (คนอุ้ม) และ `flag = 33` (คนถูกอุ้ม) ใช้ได้กับอนิเมชันคู่ส่วนใหญ่ · หาชื่ออนิเมชันได้ที่ https://alexguirre.github.io/animations-list/
-
-ท่าที่ตั้ง `target = 'dead'` จะปลุกร่างปลอมให้อัตโนมัติ
-
-## ใช้กับเฟรมเวิร์กอื่น
-
-ทุกอย่างที่คุยกับเฟรมเวิร์กอยู่ในโฟลเดอร์ `addons/` ไฟล์ละเรื่อง
-
-| ไฟล์ | แก้เมื่อ |
-|---|---|
-| `addons/framework/client.lua` | เช็กว่าผู้เล่นตายยังไง + คำสั่งกันตายซ้ำ (มีตัวอย่าง QBCore ในไฟล์) |
-| `addons/framework/server.lua` | วิธีเช็กสิทธิ์อุ้มโดยไม่ต้องขอ (มีตัวอย่าง QBCore + standalone) |
-| `addons/notify/client.lua` | ใช้ okokNotify / mythic / ระบบแจ้งเตือนของตัวเอง |
-
-## เรียกจาก resource อื่น
-
-```lua
--- client
-exports['x3d_carry']:IsCarried()              --> true ถ้ากำลังถูกอุ้ม
-exports['x3d_carry']:IsCarrying()             --> true ถ้ากำลังอุ้มคนอื่น
-exports['x3d_carry']:IsFakeAlive()            --> true ถ้าร่างถูกปลุกปลอมอยู่ (ยังตายอยู่จริง)
-
--- server
-exports['x3d_carry']:IsCarried(src)           --> true / false
-exports['x3d_carry']:IsCarrying(src)          --> true / false
-exports['x3d_carry']:StopCarry(src)           --> ปล่อยทันที คืน true ถ้ามีการอุ้มอยู่จริง
-```
-
-`IsFakeAlive()` มีไว้ให้ระบบอื่นข้าม — ระบบหิว/กระหาย/เลือดไหล ควรหยุดทำงานเมื่อค่านี้เป็น true
-
-## แก้ UI เอง
-
-UI เป็น Nuxt 4 อยู่ใน `web/` · ถ้าไม่แก้ไม่ต้องทำอะไร ของที่ build แล้วอยู่ใน `web/build` พร้อมใช้
-
-```bash
-cd web
-npm install
-npm run build        # ต้อง build ทุกครั้งหลังแก้ NUI โหลดจาก build/ เท่านั้น
-```
-
-ขนาดทุกอย่างใช้ token แบบ `clamp(px, vw, px)` ใน `app/assets/css/theme.css` — เมนูจึงสเกลตามความละเอียดจอเอง ตั้งแต่ 1280p ถึง 4K ไม่ต้องคำนวณเอง
-
-## ปัญหาที่พบบ่อย
-
-| อาการ | สาเหตุ |
-|---|---|
-| กด F9 แล้วไม่มีอะไรเกิดขึ้น | มี resource อื่นใช้ F9 อยู่ — เปลี่ยนที่ ตั้งค่า FiveM > Key Bindings > FiveM |
-| `/x3dcarry` พิมพ์แล้วขึ้นว่าไม่รู้จักคำสั่ง | resource ไม่ได้สตาร์ท — เช็ก `ensure x3d_carry` ใน `server.cfg` (คำสั่ง `ensure` ที่พิมพ์ในคอนโซลอยู่แค่จนกว่าเซิร์ฟจะรีสตาร์ท) |
-| ศพยืนแข็งทื่อตอนวาง | มีสคริปต์อื่นตั้ง `SetPedCanRagdoll(false)` ค้างไว้ หรือแก้ `Config.Corpse.ragdollOnDrop` เป็น false |
-| ศพตายซ้ำ / เด้งกลับหน้าจอตาย | ระบบหิว/กระหายของเซิร์ฟยังฆ่าซ้ำ — เพิ่มคำสั่งดันค่าใน `Framework.OnCorpseCarried()` |
-| ขี่หลังลอย / พาดบ่าหลุด | `Config.CarrierDelay` ต่ำไป ลองเพิ่มเป็น 700–1000 |
-| อุ้มแล้วตัวไม่ติด | อนิเมชันโหลดไม่ทัน ระบบลองซ้ำเองทุก 1 วิ — ถ้าไม่หายให้เช็กว่า dict ในคอนฟิกสะกดถูก |
-| แอดมินยังต้องขออนุญาต | ยังไม่ได้ใส่ `add_ace group.admin x3d_carry.force allow` ใน `server.cfg` |
-
-## ทดสอบระบบกันโกง
-
-ชุดทดสอบฝั่งเซิร์ฟเวอร์ 31 เคส (ปลอม id เป้าหมาย, อุ้มข้ามแมพ, ใช้คำยินยอมซ้ำ, แย่งคนที่ถูกอุ้มอยู่, อุ้มศพด้วยท่าคนเป็น ฯลฯ)
-
-```bash
-pip install lupa
-python tools/lua-test/x3d_carry_check.py
-```
-
-## ลิขสิทธิ์
-
-ฟรี · ใช้ได้ทุกเซิร์ฟเวอร์ · แก้โค้ดได้ตามใจ
-
-ขอแค่ **อย่านำไปขายต่อ** และอย่าอัปโหลดใหม่ในชื่อตัวเอง — เก็บเครดิตใน `fxmanifest.lua` ไว้พอ
-
-ชอบของเรา? ดูสคริปต์ตัวอื่นได้ที่ [x3d-developer.com](https://x3d-developer.com)
+### Install
+1. Put the `x3d-carry` folder in `resources/`
+2. Add `ensure x3d-carry` to `server.cfg`
+3. Configure in `config.lua`
 
 ---
 
