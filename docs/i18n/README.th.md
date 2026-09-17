@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version">
   <img src="https://img.shields.io/badge/FiveM-ESX%20%7C%20Standalone-orange.svg" alt="FiveM">
   <img src="https://img.shields.io/badge/UI-Vue%203%20%2B%20Nuxt-42b883.svg" alt="Vue">
-  <img src="https://img.shields.io/badge/ราคา-ฟรี-brightgreen.svg" alt="Free">
+  <img src="https://img.shields.io/badge/price-FREE-brightgreen.svg" alt="Free">
 </p>
 
 <p align="center">
