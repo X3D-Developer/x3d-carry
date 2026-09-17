@@ -1,46 +1,49 @@
-# X3D Carry
+<h1 align="center">
+  <br>
+  <a href="https://fivem.x3d-developer.com"><img src="docs/logo.png" alt="X3D Carry" width="360"></a>
+  <br>
+  X3D Carry
+  <br>
+</h1>
 
-**TH:** ระบบอุ้มผู้เล่น/อุ้มศพ FiveM — อุ้ม แบก ขึ้นหลัง ลากศพ, UI ภาษาไทย (Vue 3 + Nuxt).
-**EN:** FiveM player/body carry system — corpse carry, fireman carry, piggyback, with a Vue 3 NUI.
+<p align="center">
+  <b>🇬🇧 English</b> •
+  <a href="docs/i18n/README.th.md">🇹🇭 ไทย</a>
+</p>
 
-> 🆓 **ฟรี / Free** · FiveM script by **[X3D Developer](https://fivem.x3d-developer.com)** — ESX & Standalone
-> 🌐 หน้าสินค้า / Product page: **https://fivem.x3d-developer.com/th/products/x3d-carry/**
-> 💬 Discord: **https://discord.gg/x3d-developer** · ⭐ สคริปอื่น ๆ (ฟรี + พรีเมียม) ที่ **[fivem.x3d-developer.com](https://fivem.x3d-developer.com)**
+<h4 align="center">FiveM player / body carry system — corpse carry, fireman carry & piggyback, consent-based and fully server-authoritative, with a Vue 3 NUI.</h4>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Free%20(no%20resell)-blue.svg" alt="License"></a>
+  <img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version">
+  <img src="https://img.shields.io/badge/FiveM-ESX%20%7C%20Standalone-orange.svg" alt="FiveM">
+  <img src="https://img.shields.io/badge/UI-Vue%203%20%2B%20Nuxt-42b883.svg" alt="Vue">
+  <img src="https://img.shields.io/badge/price-FREE-brightgreen.svg" alt="Free">
+  <img src="https://img.shields.io/github/stars/peachoenixzz/x3d-carry?style=social" alt="Stars">
+</p>
+
+<p align="center">
+  <a href="https://fivem.x3d-developer.com/th/products/x3d-carry/">🌐 Website</a> •
+  <a href="https://discord.gg/x3d-developer">💬 Discord</a> •
+  <a href="https://fivem.x3d-developer.com">🛒 More scripts (free + premium)</a>
+</p>
 
 ---
 
-## 🇹🇭 ภาษาไทย
-
-### คุณสมบัติ
-- **อุ้มศพ · อุ้มพาดบ่า · ขี่หลัง**
-- ต้อง**ขออนุญาต**ก่อนถึงจะอุ้มคนเป็นได้
-- **เซิร์ฟเวอร์เป็นคนตัดสินทั้งหมด** — ใช้ช่องโหว่อุ้มข้ามแมพไม่ได้
-- **UI เป็น Vue 3 + Nuxt** สเกลตามความละเอียดจอ (1280p–4K)
-- มี addon แจ้งเตือน — ถ้าเซิร์ฟมี `esx_notify` / `ox_lib` อยู่แล้วจะใช้ตัวนั้นให้อัตโนมัติ ไม่มีก็ใช้การ์ดของตัวเอง
-
-### ติดตั้ง
-1. วางโฟลเดอร์ `x3d-carry` ใน `resources/`
-2. ใส่ `ensure x3d-carry` ใน `server.cfg`
-3. ปรับค่าใน `config.lua`
-
----
-
-## 🇬🇧 English
-
-### Features
+## ✨ Features
 - **Corpse carry · fireman carry · piggyback**
 - **Consent required** before carrying a living player
 - **Fully server-authoritative** — no cross-map carry exploits
 - **Vue 3 + Nuxt NUI**, scales to the screen resolution (1280p–4K)
 - Notify addon — if the server already has `esx_notify` / `ox_lib` it uses that automatically, otherwise it falls back to its own card
 
-### Install
+## 📦 Install
 1. Put the `x3d-carry` folder in `resources/`
 2. Add `ensure x3d-carry` to `server.cfg`
 3. Configure in `config.lua`
 
----
+## 💬 Support & updates
+Support and new versions are on **[Discord](https://discord.gg/x3d-developer)** and the **[website](https://fivem.x3d-developer.com)** — not GitHub issues.
 
-### License / ลิขสิทธิ์
-ฟรีสำหรับใช้ในเซิร์ฟเวอร์ของคุณ · **ห้ามขายต่อ / แจกจ่ายเพื่อการค้า** · © X3D Developer
-Free to use on your own server · **no reselling / commercial redistribution** · © X3D Developer
+## 📄 License
+Free to use on your own server · **no reselling / commercial redistribution** · © X3D Developer. See [LICENSE](LICENSE).
