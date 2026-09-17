@@ -1,6 +1,6 @@
 # X3D Carry
 
-ระบบอุ้มผู้เล่น/อุ้มศพ FiveM — อุ้ม แบก ขึ้นหลัง ลากศพ, UI ภาษาไทย Vue, ไม่ต้องพึ่ง ox_lib. · FiveM player/body carry system with a Vue UI.
+ระบบอุ้มผู้เล่น/อุ้มศพ FiveM — อุ้ม แบก ขึ้นหลัง ลากศพ, UI ภาษาไทย Vue. · FiveM player/body carry system with a Vue UI.
 
 > 🆓 **ฟรี / Free** · FiveM script by **[X3D Developer](https://fivem.x3d-developer.com)** — ESX & Standalone
 > 🌐 หน้าสินค้า / Product page: **https://fivem.x3d-developer.com/th/products/x3d-carry/**
@@ -11,7 +11,7 @@
 
 # x3d_carry — ระบบอุ้มผู้เล่น (ฟรี)
 
-อุ้มศพ · อุ้มพาดบ่า · ขี่หลัง · ต้องขออนุญาตก่อนถึงจะอุ้มคนเป็นได้ · เซิร์ฟเวอร์เป็นคนตัดสินทั้งหมด ใช้ช่องโหว่อุ้มคนข้ามแมพไม่ได้ · UI เป็น **Vue 3 + Nuxt 4** สเกลตามความละเอียดจอ · **ไม่ต้องลง ox_lib หรืออะไรเพิ่มเลย**
+อุ้มศพ · อุ้มพาดบ่า · ขี่หลัง · ต้องขออนุญาตก่อนถึงจะอุ้มคนเป็นได้ · เซิร์ฟเวอร์เป็นคนตัดสินทั้งหมด ใช้ช่องโหว่อุ้มคนข้ามแมพไม่ได้ · UI เป็น **Vue 3 + Nuxt 4** สเกลตามความละเอียดจอ · **ไม่ต้องลงอะไรเพิ่มเลย**
 
 โดย [X3D-Developer](https://x3d-developer.com) · ช่วยเหลือ: discord.gg/x3d-developer
 
